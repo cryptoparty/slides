@@ -18,9 +18,11 @@ which looks like:
 Producing slide shows with Pandoc
 ---------------------------------
 cd /slides/intro/en/
+
 pandoc -t slidy -s intro.md -o intro.html
 
 cd /slides/otr/en/
+
 pandoc -t slidy -s otr.md -o otr.html
 
 * This produces an HTML + javascript slide presentation that can be viewed via a web browser.
