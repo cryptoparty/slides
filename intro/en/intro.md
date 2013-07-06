@@ -1,4 +1,4 @@
-% Cryptoparty
+% Cryptoparty - An Introduction
 % {{Speaker Name}}
 % {{Month}} {{Date}}, {{Year}}
 

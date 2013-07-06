@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="{{Speaker Name}}" />
+  <title>Cryptoparty - Private Conversations Online using OTR</title>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js.gz"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Cryptoparty - Private Conversations Online using OTR</h1>
+  <p class="author">
+{{Speaker Name}}
+  </p>
+  <p class="date">{{Month}} {{Date}}, {{Year}}</p>
+</div>
+<div class="section slide level1" id="cryptoparty">
+<h1>Cryptoparty</h1>
+<div class="figure">
+<img src="images/logo.png" /><p class="caption"></p>
+</div>
+</div>
+<div class="section slide level1" id="alice-and-bob">
+<h1>Alice and Bob</h1>
+<ul>
+<li>Alice and Bob both know how to use PGP.</li>
+<li>They both know each other’s public keys.</li>
+<li>They don’t want to hide the fact that they talked, just what they talked about.</li>
+<li>Alice uses her public key to sign a message</li>
+<li>Bob should know who he’s talking to</li>
+<li>She then uses Bob’s public key to encrypt it</li>
+<li>No one other than Bob can read the message</li>
+<li>Bob decrypts it and verifies the signature <img src="images/threat1.png" /></li>
+</ul>
+</div>
+<div class="section slide level1" id="plot-twist">
+<h1>Plot Twist</h1>
+<ul>
+<li>Bob’s computer is subpoenaed by the FBI</li>
+<li>Or just broken into by a Virus, trojan or some spyware.</li>
+<li>Bob's key's and emails are recovered.</li>
+<li>Decrypt past messages</li>
+<li>Learn their content</li>
+<li>Learn that Alice sent them</li>
+<li>And have a mathematical proof they can show to anyone else. <img src="images/threat2.png" /></li>
+</ul>
+</div>
+<div class="section slide level1" id="what-went-wrong">
+<h1>What went wrong?</h1>
+<ul>
+<li>The software created lots of incriminating records</li>
+<li>Key material that decrypts data sent over the public Internet</li>
+<li>Signatures with proofs of who said what</li>
+<li>Alice better watch what she says</li>
+<li>Her privacy depends on Bob’s actions</li>
+</ul>
+</div>
+<div class="section slide level1" id="casual-conversations-and-otr">
+<h1>Casual Conversations and OTR</h1>
+<ul>
+<li>Alice and Bob talk in a room</li>
+<li>No one else can hear</li>
+<li>Unless being recorded</li>
+<li>No one else knows what they say</li>
+<li>Unless Alice or Bob tell them</li>
+<li>No one can prove what was said</li>
+<li>Not even Alice or Bob</li>
+<li>These conversations are “off-the-record”</li>
+<li>There is Legal support for having casual conversations.</li>
+<li>Illegal to record conversations without notification</li>
+<li>We can have them over the phone</li>
+<li>Illegal to tap phone lines</li>
+</ul>
+</div>
+<div class="section slide level1" id="perfect-forward-secrecy">
+<h1>Perfect Forward Secrecy</h1>
+<ul>
+<li>Future key compromises should not reveal past communication.</li>
+<li>Like when Bob's laptop was stolen.</li>
+<li>Use a short-lived encryption key</li>
+<li>Discard it after use</li>
+<li>Securely erase from memory</li>
+<li>Use long-term keys to help distribute &amp; authenticate the short-lived key</li>
+</ul>
+</div>
+<div class="section slide level1" id="repudiable-authentication">
+<h1>Repudiable Authentication</h1>
+<ul>
+<li>You are assured the correspondent is who you think it is.</li>
+<li>Can’t maintain privacy if attackers can impersonate friends</li>
+<li>But we do not want digital signatures</li>
+<li>Non-repudiation in digital security means that there is proof of the integrity and origin of data.</li>
+<li>Use Message Authentication Codes (MACs)</li>
+</ul>
+</div>
+<div class="section slide level1" id="encryption">
+<h1>Encryption</h1>
+<ul>
+<li>No one else can read your instant messages, not even the server</li>
+</ul>
+</div>
+<div class="section slide level1" id="deniability">
+<h1>Deniability</h1>
+<ul>
+<li>Shared key authentication.</li>
+<li>Alice and Bob have same MK.</li>
+<li>MK required to compute MAC.</li>
+<li>Bob cannot prove that Alice generated the MAC, he could have done it, too.</li>
+<li>Anyone who can veirfy can also forge messages after a conversation to make them look like they came from you.</li>
+<li>So messages you send do not have digital signatures that are checkable by a third party.</li>
+<li>However, during a conversation, your correspondent is assured the messages he sees are authentic and unmodified.</li>
+</ul>
+</div>
+<div class="section slide level1" id="what-you-need">
+<h1>What you need</h1>
+<ul>
+<li><p>Windows / Linux - pidgin with OTR plug-in. Download pidgin first from pidgin.im and then the plug in from cypherpunks.ca/otr</p></li>
+<li><p>Mac OS - download adium from adium.im (you don't need an additional plug in).</p></li>
+</ul>
+<p>There are also OTR enabled smartphone apps</p>
+<ul>
+<li>Android (Xabber).</li>
+<li>iOS (Chatsecure).</li>
+</ul>
+</div>
+<div class="section slide level1" id="then-what-do-i-do">
+<h1>Then what do I do?</h1>
+<ul>
+<li><p>Set up an address for people to reach you at.</p></li>
+<li><p>Find the person you want to speak to. Make contact.</p></li>
+<li><p>Go off the record.</p></li>
+<li><p>Manually verify fingerprints to be sure it is who you think it is and to enable encryption.</p></li>
+<li><p>Make sure logging is disabled in your chat client's settings!</p></li>
+<li><p>Make sure to also ask the person you want to speak to do the same!</p></li>
+<li><p>That's it! Remember to end the chat session and close any open windows when you are done chatting.</p></li>
+</ul>
+</div>
+<div class="section slide level1" id="what-otr-can-do-and-what-it-cant">
+<h1>What OTR can do and what it can't</h1>
+<p>Pros:</p>
+<ul>
+<li>Secure</li>
+<li>Works on a number of devices.</li>
+<li>Once you've set it up, it's pretty easy to use.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+<li>You both have to be online.</li>
+<li>And it is both. You can only have two in a secure chat.</li>
+<li>The conversation is only secure while its happening. If you keep logs, they won't be encrypted.</li>
+</ul>
+</div>
+<div class="section slide level1" id="over-to-you">
+<h1>Over to you :)</h1>
+<ul>
+<li><p>Now let's install Pidgin, Adium, or Bitlbee on your PC, Mac or Linux machine.</p></li>
+<li><p>Xabber on Android or Chatsecure on iOS.</p></li>
+</ul>
+<p>Things to do once program is intalled:</p>
+<ul>
+<li>Ensure you know what a fingerprint is and how to find yours.</li>
+<li>Ensure you know how to verify someone elses fingerprint.</li>
+<li>Ensure you know how to turn your chat client's logging setting off.</li>
+<li>Test by having an encrypted chat with a new friend at the Cryptoparty.</li>
+</ul>
+</div>
+<div class="section slide level1" id="howto-install-pidgin-and-pidgin-otr-on-ubuntudebian">
+<h1>Howto: install pidgin and pidgin-otr on Ubuntu/Debian</h1>
+<div class="figure">
+<img src="images/pidgin.png" /><p class="caption"></p>
+</div>
+<p>as root:</p>
+<ul>
+<li>apt-get install pidgin pidgin-otr</li>
+</ul>
+</div>
+<div class="section slide level1" id="howto-install-pidgin-otr-plugin-on-windows">
+<h1>Howto: install Pidgin + OTR plugin on Windows</h1>
+<div class="figure">
+<img src="images/pidgin.png" /><p class="caption"></p>
+</div>
+<ul>
+<li>Goto http://www.pidgin.im/download/windows</li>
+<li>Click the Download Pidgin for Windows link</li>
+<li>Save the installation file, then navigate to it and double click it. Install it.</li>
+<li>Goto http://www.cypherpunks.ca/otr</li>
+<li>Click the Win32 installer for pidgin link in the OTR plugin for Pidgin section</li>
+<li>Save the installer, then navigate to it and double click it. Install it.</li>
+<li>After you have successfully installed Pidgin and OTR you may delete the installation programs from your computer.</li>
+<li>Run Pidgin. Enable the OTR plugin: OTR: Tools -&gt; Plugins. Check the Box &quot;off the record messaging&quot; to enable the plugin.</li>
+</ul>
+</div>
+<div class="section slide level1" id="howto-install-adium-on-mac">
+<h1>Howto: install Adium on Mac</h1>
+<div class="figure">
+<img src="images/adium.jpg" /><p class="caption"></p>
+</div>
+<ul>
+<li>Goto http://adium.im/ and download Adium.</li>
+<li>Adium comes with otr preinstalled.</li>
+<li>Save the installation file, then navigate to it and install it.</li>
+<li>After you have successfully installed Adium you may delete the installation files from your computer.</li>
+<li>Run Adium.</li>
+</ul>
+</div>
+<div class="section slide level1" id="getting-a-jabber-account-with-jabber.ccc.de">
+<h1>Getting a jabber account with jabber.ccc.de</h1>
+<ul>
+<li>Run Pidgin.</li>
+<li>Setup your chat account. (Accounts &gt; Manage Account &gt; Add)</li>
+<li>Protocol: XMPP</li>
+<li>Username: [whatever you like!]</li>
+<li>Domain: jabber.ccc.de</li>
+<li>Password: [whatever you like!]</li>
+<li>Check 'create this new account on the server'</li>
+</ul>
+</div>
+<div class="section slide level1" id="starting-an-encrypted-chat">
+<h1>Starting An Encrypted Chat</h1>
+<ul>
+<li>Add a Buddy</li>
+<li>Start Chatting with a buddy.</li>
+<li>Click on &quot;Not Verified&quot;</li>
+<li>Use Manual Fingerprint Verification.</li>
+<li>Get your buddy to send you their fingerprint or show you in person.</li>
+<li>Let them do the same for you.</li>
+</ul>
+</div>
+<div class="section slide level1" id="links">
+<h1>Links</h1>
+<ul>
+<li>http://www.pidgin.im/</li>
+<li>http://adium.im/</li>
+<li>http://bitlbee.org/</li>
+<li>http://www.cypherpunks.ca/otr/</li>
+<li>https://en.wikipedia.org/wiki/Off-the-Record_Messaging</li>
+</ul>
+</div>
+<div class="section slide level1" id="questions">
+<h1>Questions?</h1>
+</div>
+</body>
+</html>
