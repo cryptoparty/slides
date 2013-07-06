@@ -78,8 +78,8 @@
 - Alice and Bob have same MK.
 - MK required to compute MAC.
 - Bob cannot prove that Alice generated the MAC, he could have done it, too.
-- Anyone who can veirfy can also forge messages after a conversation to make them look like they came from you.
-- So messages you send do not have digital signatures that are checkable by a third party.
+- Anyone who can verify can also forge messages after a conversation to make them look like they came from you.
+- So messages you send do not have digital signatures that are checkable by a third party. (Doesn't work in court)
 - However, during a conversation, your correspondent is assured the messages he sees are authentic and unmodified. 
 
 # What you need
@@ -90,7 +90,7 @@
 
 There are also OTR enabled smartphone apps
 
-- Android (Xabber).
+- Android (Gibberbot).
 - iOS (Chatsecure).
 
 # Then what do I do?
@@ -106,6 +106,8 @@ There are also OTR enabled smartphone apps
 - Make sure logging is disabled in your chat client's settings!
 
 - Make sure to also ask the person you want to speak to do the same!
+
+- Discuss a shared secret to authenticate your conversation partner with.
 
 - That's it! Remember to end the chat session and close any open windows when you are done chatting.
 
@@ -127,7 +129,7 @@ Cons:
 
 -  Now let's install Pidgin, Adium, or Bitlbee on your PC, Mac or Linux machine.
 
-- Xabber on Android or Chatsecure on iOS.
+- Gibberbot on Android or Chatsecure on iOS.
 
 Things to do once program is intalled:
 
