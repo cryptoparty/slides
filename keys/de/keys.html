@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Kryptographische Schlüssel" />
+  <title></title>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js.gz"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title"><img src="../images/logo.png" /></h1>
+  <p class="author">
+<strong>Kryptographische Schlüssel</strong>
+  </p>
+  <p class="date">{{Speaker Name}} — {{Month}} {{Date}}, {{Year}}</p>
+</div>
+<div class="section slide level1" id="überblick">
+<h1>Überblick</h1>
+<ul>
+<li>Kryptographische Schlüssel</li>
+<li>Verschlüsseln und Signieren</li>
+<li>Zertifikate</li>
+<li>Sicherheitsannahmen</li>
+</ul>
+<img src="./images/CryptoKey.svg" style="align:right"/>
+</div>
+<div class="section slide level1" id="schlüsselpaar">
+<h1>Schlüsselpaar</h1>
+<p>&quot;Immer zu zweit sie sind! Ein Meister und ein Schüler!&quot; ~ Meister Yoda (Episode 1)</p>
+<hr/>
+
+<table align=center>
+<tr><td>
+öffentlicher Schlüssel
+</td><td>
+privater Schlüssel
+</td></tr>
+<tr><td>
+<img src="./images/PubKey.svg" style="align:right"/>
+</td><td>
+<img src="./images/PrivKey.svg" style="align:right"/>
+</td></tr>
+</table>
+
+<hr />
+
+<p>Schnappschloß Tür-Analogie:</p>
+<ul>
+<li>öffentlich: jeder kann die Tür zuziehen</li>
+<li>privat: nur mit Schlüssel zu öffnen</li>
+</ul>
+</div>
+<div class="section slide level1" id="verschlüsseln">
+<h1>Verschlüsseln</h1>
+<ul>
+<li>Macht Daten unlesbar</li>
+<li>&quot;ausser&quot;</li>
+<li>mit dem passenden Schlüssel.</li>
+<li>Bsp: &quot;Das wird jetzt kryptisch!&quot;</li>
+</ul>
+<p>hQEMA9WCTo3/O878AQf8Cl0QcfmgAO1vLDjfqC21hUqoZ6zI5qrgcwZO3uLH4RBr uDwG+wMo+Mx1fiqGCgwJRelRx03u1p5bi9IpVn9kPttFhmhIOVEuZ9fyyF1dYUe6 YOBnbdwaQ3IeI5p+JqrlG6Xgnw8pSrhlwGYOwg2ya+U9gMjcrFa6IgwpOKI3Dime kJcmkq5cQWyiyfK811romZzfUi66L02lTp8RchZjrvwvMOjcmbOKJrp56xWe1RP9 XqpRzoreiQmn8XgkHA6eTLmMFz79Jbpz/LLS21x0VVBmhojVTxiPmQXfdxazgeYZ FJ+mWrKTgrIMMXdVEL0YLDWdqh5N2ZY15jfnktf6ZdJVARIwGjjVdOpXZecJwgLY Ftllw5hXyA+QOdzK8IGiAy5hMfSSFew/mk6aLxa2txrtmOliO5ahJBz8N29hxczY EI8qdfou4kjpfY8ekB+qxWjYKpF9uA===VXx6</p>
+</div>
+<div class="section slide level1" id="public-key-verschlüsselung">
+<h1>Public-Key Verschlüsselung</h1>
+<img src="./images/PublicKeyCryptography.png" style="height:80%"/>
+</div>
+<div class="section slide level1" id="signieren">
+<h1>Signieren</h1>
+<ul>
+<li>Privater Schlüssel: ist nur dem Besitzer bekannt</li>
+<li><p>Entschlüsseln kann nur mit privatem Schlüssel geschehen</p></li>
+<li>Signatur ist Anwendung des Privaten Schlüssels auf Daten</li>
+<li><p>Jeder andere kann dies mit dem Öffentlichen Schlüssel prüfen</p></li>
+<li><p>Voraussetzung: Kenntnis des Öffentlichen Schlüssels</p></li>
+</ul>
+</div>
+<div class="section slide level1" id="zertifikat">
+<h1>Zertifikat</h1>
+<p>Signatur über:</p>
+<ul>
+<li>Identifikator: Name, Email, Web-Adresse,…</li>
+<li>öffentlicher Schlüssel</li>
+</ul>
+<hr /> 
+
+<p>Signierender Zertifizierer muß vorher prüfen: - Identifikator gehört zur Person - Person kennt passenden privaten Schlüssel</p>
+<hr />
+
+<p>Glaubwürdigkeit von Zertifikaten - ist Vertrauenswürdigkeit des Zertifizierers</p>
+</div>
+<div class="section slide level1" id="sicherheit">
+<h1>Sicherheit</h1>
+<ul>
+<li>Entschlüsseln ohne passenden Schlüssel: schwierig</li>
+<li>Geheimhaltung d. priv. Schlüssels</li>
+<li>Hauptproblem: Zertifizierungsstellen (CA)</li>
+<li>z.B. im Browser 250 &quot;vertrauenswürdige&quot; Stellen</li>
+<li>Jede CA kann alle Seiten signieren</li>
+</ul>
+</div>
+<div class="section slide level1" id="zusammenfassung">
+<h1>Zusammenfassung</h1>
+<p>-</p>
+</div>
+</body>
+</html>
