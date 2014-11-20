@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Eine Einführung" />
+  <title></title>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js.gz"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title"><img src="../images/logo.png" /></h1>
+  <p class="author">
+<strong>Eine Einführung</strong>
+  </p>
+  <p class="date">{{Speaker Name}} — {{Month}} {{Date}}, {{Year}}</p>
+</div>
+<div class="section slide level1" id="ablauf">
+<h1>Ablauf</h1>
+<ul>
+<li>Kurze Einführung</li>
+<li>Fragen, Fragen, Fragen und Themen</li>
+<li>Thementeile</li>
+<li>Klicken, Helfen, Installieren</li>
+</ul>
+</div>
+<div class="section slide level1" id="vorstellung">
+<h1>Vorstellung</h1>
+<ul>
+<li>Team</li>
+<li>Ort</li>
+</ul>
+</div>
+<div class="section slide level1" id="motivation">
+<h1>Motivation</h1>
+<p>Privatheit herstellen - Recht auf Informationelle Selbstbestimmung</p>
+<dl>
+<dt><quote>„<strong>Die Regierung kann deine Daten nicht schützen</strong>”</dt>
+<dd><p>Im Gespräch: CSU-Politiker Uhl, FAZ, 17.07.2013</quote></p>
+</dd>
+<dt><quote>„Bundesinnenminister Hans-Peter Friedrich […] rief die Deutschen dazu auf, <strong>selbst mehr für den Schutz ihrer Daten zu tun</strong>.” <br/></dt>
+<dd><p>Spiegel Online 2013-07-16</quote></p>
+</dd>
+</dl>
+<p><quote> „Privacy is <strong>necessary for an open society</strong> in the electronic age.”<br/> „Privacy is the power to <strong>selectively reveal</strong> oneself to the world” ~<a href="http://www.activism.net/cypherpunk/manifesto.html">Cypherpunk Manifesto</a> </quote></p>
+</div>
+<div class="section slide level1" id="werkzeugkasten">
+<h1>Werkzeugkasten</h1>
+<ul>
+<li>hier: eine Lösung pro Problem (der Einfachheit halber)</li>
+</ul>
+<table style="border-width:2pt">
+<tr><td>
+Email
+</td><td>
+Thunderbird, Enigmail, GnuPG
+</td></tr>
+<tr><td>
+Chat
+</td><td>
+Pidgin, OTR-Plugin
+</td></tr>
+<tr><td>
+Anonymes Internet
+</td><td>
+TorBrowserBundle
+</td></tr>
+<tr><td>
+Datenspeicher
+</td><td>
+Truecrypt
+</td>
+<tr><td>
+Schlüsselverwaltung
+</td><td>
+Seamonked
+</td></tr>
+<tr><td>
+VPN
+</td><td>
+(…erst mal nicht)
+</td></tr>
+</table>
+
+<img src="../images/thunderbird-logo.jpeg" alt="Thunderbird Logo"/><img src="../images/enigmail-logo.png" alt="Enigmail Logo"/><img src="../images/logo-gnupg.png" alt="GnuPG Logo"/><img src="../images/tor-logo.jpg" alt="Tor Logo"/>
+</div>
+<div class="section slide level1" id="open-source">
+<h1>Open Source</h1>
+<ul>
+<li>„Free Software”, nicht Freibier -- Peer-Review schafft Funktionssicherheit</li>
+</ul>
+</div>
+<div class="section slide level1" id="sicherheitsziele">
+<h1>Sicherheitsziele</h1>
+<ul>
+<li>
+Privatheit
+</li>
+<li>
+Vertraulichkeit
+</li>
+<ul><li>
+Inhalt
+</li>
+<li>
+Kommunikations-/Metadaten (Sender, Absender, Zeit)
+</li>
+</ul>
+<li>
+Integrität
+</li>
+<li>
+Authentizität
+</li>
+<ul><li>
+Nie wieder Spam?
+</li>
+</ul>
+</ul>
+
+
+
+
+
+</div>
+<div class="section slide level1" id="privatheit">
+<h1>Privatheit</h1>
+<ul>
+<li>„Wenn du nichts zu verbergen hast, dann hast du auch nichts zu befürchten.”</li>
+<li>Grundrecht auf informationelle Selbstbestimmung (BVerfG 1983)</li>
+<li>Beobachtung ändert Verhalten</li>
+</ul>
+<p>Gefährdung durch: - Cookies, CCTV, Metadata, - Social Networks, Suchmaschinen, ISP</p>
+<p>Gegenmaßnahmen: - Datensparsamkeit - Kryptographie/Inhaltsverschlüsselung - Anonymisierdienste - Verschlüsselte Speichermedien</p>
+</div>
+<div class="section slide level1" id="security-vs-privacy">
+<h1>Security vs Privacy</h1>
+<div class="figure">
+<img src="images/house.jpg" /><p class="caption"></p>
+</div>
+</div>
+<div class="section slide level1" id="anonymität">
+<h1>Anonymität</h1>
+<ul>
+<li>Aktionen und Person sind nicht zuzuordnen</li>
+<li>Sender-/Empfängeranonymität</li>
+<li>Pseudonyme</li>
+<li>Verkettbarkeit von Pseudonymen schaffen Identität</li>
+<li>Tor, Bitcoin, Freenet</li>
+</ul>
+</div>
+<div class="section slide level1" id="authentifikation">
+<h1>Authentifikation</h1>
+<ul>
+<li>„Sichere Identität” schafft Kontinuität</li>
+<li>Grundlage für Vertrauen/Beziehungen</li>
+<li>Identitäten (Email/IP-Adresse) sind nicht authentisch</li>
+<li><p>Grundlegende Methode: Public-Key Kryptographie</p></li>
+<li><p>PGP (GnuPG), TLS, S/MIME</p></li>
+</ul>
+</div>
+<div class="section slide level1" id="integrität">
+<h1>Integrität</h1>
+<ul>
+<li>Inhalt kann nicht unbemerkt verändert</li>
+</ul>
+</div>
+<div class="section slide level1" id="was-ist-crypto">
+<h1>Was ist &quot;Crypto&quot;?</h1>
+<p>Cryptography ist:</p>
+<ul>
+<li>Ein Haufen komplizierte Mathematik</li>
+<li>Grundlage für viele Sicherheitsmechanismen</li>
+</ul>
+<p>Cryptography ist nicht:</p>
+<ul>
+<li>Ersatz für vernünftiges Handeln (OPSEC)</li>
+<li>Einfach zu programmieren</li>
+<li>Leicht selbst zu erfinden</li>
+</ul>
+</div>
+<div class="section slide level1" id="crypto-party-cryptoparty">
+<h1>Crypto + Party = Cryptoparty</h1>
+<div class="figure">
+<img src="images/splash.jpg" /><p class="caption"></p>
+</div>
+</div>
+<div class="section slide level1" id="what-next">
+<h1>What Next?</h1>
+</div>
+</body>
+</html>
